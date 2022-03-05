@@ -42,7 +42,7 @@ const indv = {
         }
     
         const res2 = await fetch("https://iporesult.cdsc.com.np/result/result/check", options);
-        const data2 = await res2.text();
+        const data2 = await res2.json();
         
         if(!res2 || !data2) return console.log("Error: Invalid boid".red)
     
