@@ -58,7 +58,5 @@ const indv = {
       }    
 };
 
-
-indv.check()
  
 export default indv;
