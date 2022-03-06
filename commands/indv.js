@@ -40,10 +40,15 @@ const indv = {
             },
             body: JSON.stringify({boid, companyShareId: id})
         }
+
     
         const res2 = await fetch("https://iporesult.cdsc.com.np/result/result/check", options);
+        
+        if(res2.status >= 400) return console.log("Error: Something went wrong.".red)
+
         const data2 = await res2.json();
         
+
         if(!res2 || !data2) return console.log("Error: Invalid boid".red)
     
         if(!data2.success) return console.log(":( Sorry, not alloted for the given boid.".red)
@@ -54,5 +59,6 @@ const indv = {
 };
 
 
+indv.check()
  
 export default indv;
