@@ -16,7 +16,7 @@ const indv = {
             type: "list",
             name: "company",
             message: "Select the company",
-            choices: data.map((x) => `${x.id} ${x.name}`),
+            choices: data.map((obj) => `${obj.id} ${obj.name}`),
           },
           {
               type: "input",
@@ -53,7 +53,7 @@ const indv = {
     
         if(!data2.success) return console.log(":( Sorry, not alloted for the given boid.".red)
     
-        console.log(`Success:) ${data2.message}`.green)
+        console.log(`Success ${data2.message}`.green)
     
       }    
 };
